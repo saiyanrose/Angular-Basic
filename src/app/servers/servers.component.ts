@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { log } from 'console';
+
 
 @Component({
   //selector: 'app-servers', 
