@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -15,22 +15,38 @@ export class ServersComponent{
   allowNewServer:boolean=false;
   serverCreationStatus='no server was created';
   serverName="";
-  serverCreated=false;
-  servers=['test','test1'];
+  serverCreated=false;  
+  servers=[];
 
+  @ViewChild('serverNameContent')serverNameContent:ElementRef;
+
+  //disable button for 2sec
   constructor(){
     setTimeout(()=>{
       this.allowNewServer=true;
     },2000);
-  }
+  }  
+  
+  onCreateServer(serverData:{serverId:number,serverStatus:string}){
+    //@Output
+    console.log('serverId and serverStatus: '+serverData.serverId+' '+serverData.serverStatus);    
 
-  onCreateServer(){
+    //show @viewChild()
+    console.log('@viewChild(): '+this.serverNameContent.nativeElement.value);
+    
+    //set serverCreated to true
     this.serverCreated=true;
+
+    //push into servers array
     this.servers.push(this.serverName);
+
+    //set server info
     this.serverCreationStatus='server is created name: '+this.serverName;
   }
 
+  //add server name
   onUpdateServerName(event:any){
     this.serverName=event.target.value;    
   }
+  
 }

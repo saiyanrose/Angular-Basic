@@ -4,3 +4,6 @@
     [ngClass]="{online:serverStatus==='online'}">
     {{'Server'}} with ID: {{serverId}} is {{getServerStatus()}}
 </h3>
+
+<button class="btn btn-primary" (click)="onCreateServer()">CustomEvent</button>
+<button class="btn btn-danger" (click)="onDestroyFirst()">Destroy</button>
