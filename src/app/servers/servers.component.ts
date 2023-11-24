@@ -29,7 +29,7 @@ export class ServersComponent{
   
   onCreateServer(serverData:{serverId:number,serverStatus:string}){
     //@Output
-    console.log('serverId and serverStatus: '+serverData.serverId+' '+serverData.serverStatus);    
+    //console.log('serverId and serverStatus: '+serverData.serverId+' '+serverData.serverStatus);    
 
     //show @viewChild()
     console.log('@viewChild(): '+this.serverNameContent.nativeElement.value);
