@@ -12,7 +12,10 @@ export class NewAccountComponent implements OnInit {
   //@Output() accountAdded = new EventEmitter<{ name: string; status: string }>();
   
   constructor(//private service:LoggingService,
-    private accountservice:AccountService) { }
+    private accountservice:AccountService) {
+      this.accountservice.statusUpdated.subscribe((status:string)=>
+        alert('new status:'+status));
+     }
 
   ngOnInit() {
 
