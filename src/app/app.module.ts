@@ -7,6 +7,8 @@ import { ServersComponent } from './servers/servers.component';
 import { FormsModule } from '@angular/forms';
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { OddevenComponent } from './oddeven/oddeven.component';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { OddevenComponent } from './oddeven/oddeven.component';
     ServerComponent,
     ServersComponent,
     BasicHighlightDirective,
-    OddevenComponent
+    OddevenComponent,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,FormsModule

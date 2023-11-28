@@ -15,6 +15,15 @@
             <app-oddeven></app-oddeven>
         </div>
     </div>
+    <hr>
+    <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+    <hr>
+    <app-account
+      *ngFor="let acc of accounts; let i = index"
+      [account]="acc"
+      [id]="i"
+      (statusChanged)="onStatusChanged($event)">
+    </app-account>
 </div>
 
 
