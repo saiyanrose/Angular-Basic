@@ -40,21 +40,18 @@ export class ServerComponent implements OnInit,OnChanges,DoCheck,AfterContentIni
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        console.log('ngOnChanges called: '+changes);
+        console.log(changes);
     }
-
-    //@Output()
+    
     onCreateServer(){
         this.getServerDetails.emit({serverId:this.serverId,serverStatus:this.serverStatus});
     }
-
-    //@Input()
+    
     getServerStatus(){
         console.log('servers from servers component to server component: '+this.allservers);
         return this.serverStatus;
-    }    
-
-    //ngStyle
+    }
+    
     getColor(){
         return this.serverStatus==='online' ? 'green' : 'red';
     }

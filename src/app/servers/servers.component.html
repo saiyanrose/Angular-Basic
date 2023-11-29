@@ -1,5 +1,5 @@
 <label>Server Name</label>
-<input type="text" class="form-control" (input)="onUpdateServerName($event)"><!--$event-->
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
 <p>{{serverName}}</p>
 
 <hr>
@@ -24,7 +24,7 @@
 
 <div class="container">
     <div class="row" *ngFor="let s of servers;index as i">
-       <p>{{i+1}} --Server name is: {{s}}</p>
+       <p>{{i+1}} Server name is: {{s}}</p>
     </div>
 </div>
 

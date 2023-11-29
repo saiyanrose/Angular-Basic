@@ -24,8 +24,5 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.accounts=this.service.accounts;
   }
-
-  onAccountAdded(name:string,status:string){
-
-  }
+  
 }

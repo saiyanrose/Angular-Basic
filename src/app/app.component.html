@@ -9,22 +9,24 @@
             <p appBasicHighlight>Style with basic directive.</p>
         </div>
     </div>
+
     <hr>
+    
     <div class="row">
         <div class="col-xs-12">
             <app-oddeven></app-oddeven>
         </div>
     </div>
-    <hr>
-    <!--(accountAdded)="onAccountAdded($event)"-->
+    <hr>    
+
     <app-new-account ></app-new-account>
+
     <hr>
-    <!--(statusChanged)="onStatusChanged($event)"-->
+    
     <app-account
       *ngFor="let acc of accounts; let i = index"
       [account]="acc"
-      [id]="i"
-      >
+      [id]="i">
     </app-account>
 </div>
 
